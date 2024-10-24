@@ -1,0 +1,55 @@
+#avatar-container {
+    width: 300px;
+    margin: 0 auto;
+    text-align: center;
+}
+
+.avatar {
+    width: 100%;
+    transition: transform 0.2s;
+}
+
+/* Анимация моргания */
+@keyframes blink {
+    0%, 20%, 40%, 60%, 80%, 100% { transform: scaleY(1); }
+    10%, 30%, 50%, 70%, 90% { transform: scaleY(0.1); }
+}
+
+/* Анимация движения головы */
+@keyframes head-move {
+    0%, 100% { transform: rotate(0); }
+    25% { transform: rotate(-3deg); }
+    75% { transform: rotate(3deg); }
+}
+
+/* Анимация движения рта */
+@keyframes talking {
+    0%, 100% { transform: translateY(0); }
+    50% { transform: translateY(-5px); }
+}
+
+/* Анимация улыбающегося лица */
+@keyframes smiling {
+    0%, 100% { transform: scaleX(1); }
+    50% { transform: scaleX(1.1); }
+}
+
+/* Аватар моргает */
+.blinking {
+    animation: blink 4s infinite;
+}
+
+/* Аватар двигает ртом */
+.talking {
+    animation: talking 0.2s infinite;
+}
+
+/* Аватар двигает головой */
+.moving-head {
+    animation: head-move 5s infinite;
+}
+
+/* Аватар улыбается */
+.smiling {
+    animation: smiling 2s infinite;
+}
